@@ -1,0 +1,143 @@
+[
+
+    {
+        "text": "peito de frango desfiado refogado com verduras",
+        "label": "FRANGO"
+    }, {
+        "text": "coxa assada no forno",
+        "label": "FRANGO"
+    }, 
+
+    {
+        "text": "frango fresco cozido",
+        "label": "FRANGO"
+    }, 
+    {
+        "text": "sobrecoxa desossada no forno",
+        "label": "FRANGO"
+    },
+     {
+        "text": "bife de frango fresco",
+        "label": "FRANGO"
+    },
+    {
+        "text": "torta de frango leve",
+        "label": "FRANGO"
+    },
+    {
+        "text": "Omelete de forno de frango leve",
+        "label": "FRANGO"
+    },
+
+    {
+        "text": "omelete tradicional de frango ",
+        "label": "FRANGO"
+    },
+
+     {
+        "text": "Filé de peito de frango fresco à milanesa",
+        "label": "FRANGO"
+    },
+
+     {
+        "text": "Filé de cará à milanesa",
+        "label": "PEIXE"
+    },
+
+    {
+        "text": "Omelete de cará",
+        "label": "PEIXE"
+    },
+    {
+        "text": "Omelete de salmão",
+        "label": "PEIXE"
+    },
+    {
+        "text": "Filé de atum no forno",
+        "label": "PEIXE"
+    },
+
+     {
+        "text": "Filé de sirigado no forno",
+        "label": "PEIXE"
+    },
+    {
+        "text": "peixada no molho",
+        "label": "PEIXE"
+    },
+    {
+        "text": "filé de pescada amarela no forno",
+        "label": "PEIXE"
+    },
+    {
+        "text": "filé de bonito no forno",
+        "label": "PEIXE"
+    },
+    {
+        "text": "torta leve de atum",
+        "label": "PEIXE"
+    },
+    
+    {
+        "text": "carne na panela",
+        "label": "CARNE VERMELHA"
+    },
+    {
+        "text": "carne moída de alcatra",
+        "label": "CARNE VERMELHA"
+    },
+    {
+        "text": "bife de alcatra acebolado",
+        "label": "CARNE VERMELHA"
+    },
+
+    {
+        "text": "almôndegas de frango",
+        "label": "FRANGO"
+    },
+    {
+        "text": "almôndegas de alcatra",
+        "label": "CARNE VERMELHA"
+    },
+
+     {
+        "text": "lombo com especiarias na panela",
+        "label": "CARNE VERMELHA"
+    },
+
+     {
+        "text": "ovos mexidos",
+        "label": "OVO-LACTO VEGETARIANO"
+    },
+
+    {
+        "text": "farofa de ovos",
+        "label": "OVO-LACTO VEGETARIANO"
+    },
+
+    {
+        "text": "soja no molho com especiarias",
+        "label": "OVO-LACTO VEGETARIANO"
+    },
+     {
+        "text": "proteína texturizada de soja no molho com especiarias",
+        "label": "OVO-LACTO VEGETARIANO"
+    },
+     {
+        "text": "almôndega de soja",
+        "label": "OVO-LACTO VEGETARIANO"
+    },
+    {
+        "text": "Omelete de queijo mussarela",
+        "label": "OVO-LACTO VEGETARIANO"
+    },
+    {
+        "text": "Omelete de queijo coalho",
+        "label": "OVO-LACTO VEGETARIANO"
+    },
+    {
+        "text": "queijo coalho assado",
+        "label": "OVO-LACTO VEGETARIANO"
+    },
+
+]
