@@ -23,6 +23,8 @@
 /* Begin PBXBuildFile section */
 		4E1ED6FE27DA4955005E8ACE /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 4E1ED6FD27DA4955005E8ACE /* ArgumentParser */; };
 		4E1ED70127DB9BC5005E8ACE /* food_classifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4E1ED70027DB9BC5005E8ACE /* food_classifier.mlmodel */; };
+		4E1ED70427DF5F37005E8ACE /* ConsoleKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4E1ED70327DF5F37005E8ACE /* ConsoleKit */; };
+		4E1ED70627DF68BE005E8ACE /* food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1ED70527DF68BE005E8ACE /* food.swift */; };
 		OBJ_21 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
 		OBJ_28 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_39 /* fastmenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* fastmenuTests.swift */; };
@@ -47,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		4E1ED70027DB9BC5005E8ACE /* food_classifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = food_classifier.mlmodel; sourceTree = "<group>"; };
+		4E1ED70527DF68BE005E8ACE /* food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = food.swift; sourceTree = "<group>"; };
 		OBJ_12 /* fastmenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fastmenuTests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 			buildActionMask = 0;
 			files = (
 				4E1ED6FE27DA4955005E8ACE /* ArgumentParser in Frameworks */,
+				4E1ED70427DF5F37005E8ACE /* ConsoleKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +118,7 @@
 			children = (
 				4E1ED70027DB9BC5005E8ACE /* food_classifier.mlmodel */,
 				OBJ_8 /* fastmenu */,
+				4E1ED70527DF68BE005E8ACE /* food.swift */,
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -158,6 +163,7 @@
 			name = fastmenu;
 			packageProductDependencies = (
 				4E1ED6FD27DA4955005E8ACE /* ArgumentParser */,
+				4E1ED70327DF5F37005E8ACE /* ConsoleKit */,
 			);
 			productName = fastmenu;
 			productReference = "fastmenu::fastmenu::Product" /* fastmenu */;
@@ -199,6 +205,7 @@
 			mainGroup = OBJ_5;
 			packageReferences = (
 				4E1ED6FC27DA4955005E8ACE /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+				4E1ED70227DF5F37005E8ACE /* XCRemoteSwiftPackageReference "ConsoleKit" */,
 			);
 			productRefGroup = OBJ_13 /* Products */;
 			projectDirPath = "";
@@ -219,6 +226,7 @@
 			files = (
 				OBJ_21 /* main.swift in Sources */,
 				4E1ED70127DB9BC5005E8ACE /* food_classifier.mlmodel in Sources */,
+				4E1ED70627DF68BE005E8ACE /* food.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +529,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		4E1ED70227DF5F37005E8ACE /* XCRemoteSwiftPackageReference "ConsoleKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apparata/ConsoleKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -528,6 +544,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4E1ED6FC27DA4955005E8ACE /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
 			productName = ArgumentParser;
+		};
+		4E1ED70327DF5F37005E8ACE /* ConsoleKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E1ED70227DF5F37005E8ACE /* XCRemoteSwiftPackageReference "ConsoleKit" */;
+			productName = ConsoleKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
