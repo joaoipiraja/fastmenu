@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "ConsoleKit",
+        "repositoryURL": "https://github.com/apparata/ConsoleKit.git",
+        "state": {
+          "branch": null,
+          "revision": "8e2736f2d0b01fcfa3313702fdaac052a5f9ffb9",
+          "version": "0.2.1"
+        }
+      },
+      {
         "package": "swift-argument-parser",
         "repositoryURL": "https://github.com/apple/swift-argument-parser.git",
         "state": {
