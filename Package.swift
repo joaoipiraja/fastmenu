@@ -23,7 +23,7 @@ let package = Package(
                 .product(name: "ConsoleKit", package: "ConsoleKit"),
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
             ],
-            resources: [.process("food_classifier.mlmodelc")]
+            resources: [.process("Resources")]
         ),
         .testTarget(
             name: "fastmenuTests",
