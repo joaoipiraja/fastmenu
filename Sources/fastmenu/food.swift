@@ -19,8 +19,6 @@ enum FoodTypes: String{
 }
 
 
-
-
 class Price{
     
     
@@ -73,10 +71,10 @@ class MenuItem: food_classifier {
 //    }
     
     convenience init(content:String) {
-        self.content = content
         let bundle = Bundle(url: Bundle.main.bundleURL.appendingPathComponent("fastmenu_fastmenu.bundle"))!
         let modelURL = bundle.url(forResource: "food_classifier", withExtension: "mlmodelc")!
         try! self.init(contentsOf: modelURL, configuration: .init())
+        self.content = content
     }
     
     
@@ -96,20 +94,36 @@ class MenuItem: food_classifier {
 }
 
 extension Menu: CustomStringConvertible{
+    
     var description: String {
-        return items.reduce("", { first, second in
-            
-            first + "{}"
+        return
+        
+        "🌸 Bom dia, nosso cardápio de hoje é:\n\n" +
+        
+        items.reduce("", { first, second in
+            let price = second.generate()
+            return first + String(format:"%@ \n *PEQUENO* - R$ %.2f | *GRANDE* - R$ %.2f \n", second.content, price.small_size, price.big_size)
         })
+        
+        + """
+        Aos interessados, favor confirmar seu pedido!
+        -----
+        Aceitamos pagamento por PIX
+        🔑  (85)998159740
+        🔑  najlaipiraja@hotmail.com
+        -----
+        Disponíveis de 11:30 ~ 12:30 no APT 1004 T1.
+        """
     }
 }
 
 class Menu{
+    
+    
     private var items: Array<MenuItem>
     
-    
     init(){
-        self.item = Array()
+        self.items = Array()
     }
     
     
