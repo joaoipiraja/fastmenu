@@ -1,15 +1,7 @@
 import CoreML
 import ConsoleKit
 
-let model: food_classifier? = {
-    do {
-        let config = MLModelConfiguration()
-        return try food_classifier(configuration: config)
-    }catch{
-        Console.writeError("Could not open the model")
-        return nil
-    }
-}()
+
 
 Console.write("Output >> ")
 
@@ -22,4 +14,5 @@ if let menu_output = Console.readLine(){
     
     Console.writeLine(food_label.label)
 }
+    
 }
