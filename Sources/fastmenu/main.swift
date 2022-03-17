@@ -2,8 +2,8 @@ import CoreML
 import ConsoleKit
 
 
-
-Console.write("Output >> ")
+ConsoleKit.
+/*Console.write("Output >> ")
 
 if let model_aux = model{
 if let menu_output = Console.readLine(){
@@ -16,3 +16,4 @@ if let menu_output = Console.readLine(){
 }
     
 }
+*/

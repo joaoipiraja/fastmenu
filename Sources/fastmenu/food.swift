@@ -102,7 +102,7 @@ extension Menu: CustomStringConvertible{
         
         items.reduce("", { first, second in
             let price = second.generate()
-            return first + String(format:"%@ \n*PEQUENO* - R$ %.2f | *GRANDE* - R$ %.2f \n", second.content, price.small_size, price.big_size)
+            return first + String(format:"%@ \n*PEQUENO* - R$ %.2f | *GRANDE* - R$ %.2f\n", second.content, price.small_size, price.big_size)
         })
         
         + """
@@ -122,6 +122,16 @@ class Menu{
     
     private var items: Array<MenuItem>
     var menu_input:String
+    
+    
+    private func split_menu(){
+        
+        var menu_aux = self.menu_input.components(separatedBy: [";", "\n"])
+        let menu_main_dish = (menu_aux.last ?? "ou").components(separatedBy: "ou")
+        
+        //return menu_aux.removeLast().reduce.
+        
+    }
     
     init(menu_input: String){
         self.items = Array()
