@@ -22,8 +22,8 @@ enum FoodTypes: String{
 class Price{
     
     
-    var small_size:Float
-    var big_size:Float
+    var smallSize:Float
+    var bigSize:Float
     
     
     func add(by label: String){
@@ -31,28 +31,28 @@ class Price{
         
         switch food_type{
         case .chicken:
-            self.small_size = 0.0
-            self.big_size = 0.0
+            self.smallSize = 16.0
+            self.bigSize = 25.0
         case .red_meat:
-            self.small_size = 0.0
-            self.big_size = 0.0
+            self.smallSize = 19.0
+            self.bigSize = 28.0
         case .fish:
-            self.small_size = 0.0
-            self.big_size = 0.0
+            self.smallSize = 20.0
+            self.bigSize = 30.0
         case .vegetarian:
-            self.small_size = 0.0
-            self.big_size = 0.0
+            self.smallSize = 16.0
+            self.bigSize = 25.0
         case .none:
-            self.small_size = Float.nan
-            self.big_size = Float.nan
+            self.smallSize = Float.nan
+            self.bigSize = Float.nan
         }
         
         
     }
     
     init(){
-        self.small_size = Float.nan
-        self.big_size = Float.nan
+        self.smallSize = Float.nan
+        self.bigSize = Float.nan
     }
     
 }
@@ -93,50 +93,72 @@ class MenuItem: food_classifier {
     
 }
 
-extension Menu: CustomStringConvertible{
-    
-    var description: String {
-        return
-        
-        "🌸 Bom dia, nosso cardápio de hoje é:\n\n" +
-        
-        items.reduce("", { first, second in
-            let price = second.generate()
-            return first + String(format:"%@ \n*PEQUENO* - R$ %.2f | *GRANDE* - R$ %.2f\n", second.content, price.small_size, price.big_size)
-        })
-        
-        + """
-        Aos interessados, favor confirmar seu pedido!
-        -----
-        Aceitamos pagamento por PIX
-        🔑  (85)998159740
-        🔑  najlaipiraja@hotmail.com
-        -----
-        Disponíveis de 11:30 ~ 12:30 no APT 1004 T1.
-        """
-    }
-}
 
-class Menu{
+
+
+
+
+class Menu: CustomStringConvertible{
     
+    private let menuHeader =
+    "\n🌸 Bom dia, nosso cardápio de hoje é:\n\n"
+    
+    private let menuBaseBoard = """
+    
+    Aos interessados, favor confirmar seu pedido!
+    -----
+    Aceitamos pagamento por PIX
+    🔑  (85)998159740
+    🔑  najlaipiraja@hotmail.com
+    -----
+    Disponíveis de 11:30 ~ 12:30 no APT 1004 T1.
+    """
     
     private var items: Array<MenuItem>
-    var menu_input:String
+    var menuInput:String
+    
+
+    init(menuInput: String){
+        self.items = Array()
+        self.menuInput = menuInput
+        self.split_menu()
+    }
     
     
     private func split_menu(){
         
-        var menu_aux = self.menu_input.components(separatedBy: [";", "\n"])
-        let menu_main_dish = (menu_aux.last ?? "ou").components(separatedBy: "ou")
+        //Arroz branco;Feijão verde;Batata doce cozida;Sobrecoxa tradicional assada no forno ou omelete de queijo
+        //Arroz branco;Feijão verde;Batata doce cozida;Sobrecoxa tradicional assada
+        //Arroz branco;Feijão verde;Batata doce cozida;Omelete de queijo
         
-        //return menu_aux.removeLast().reduce.
+        var menu_aux = self.menuInput.components(separatedBy: [";", "\n"])
+        var main_dish = (menu_aux.last ?? "ou").components(separatedBy: "ou")
+        
+        main_dish.forEach { md in
+            var content = menu_aux.map{$0.removeSpaces().capitalizingFirstLetter()}
+            content.removeLast()
+            content.append(md.removeSpaces().capitalizingFirstLetter())
+            let contentString = content.joined(separator: ";")
+            items.append(MenuItem(content: contentString ))
+        }
         
     }
     
-    init(menu_input: String){
-        self.items = Array()
-        self.menu_input = menu_input
+    
+    var description: String {
+        return
+        
+        menuHeader +
+        
+        items.reduce("", { first, second in
+            let price = second.generate()
+            return first + String(format:"\n%@ \n*PEQUENO* - R$ %.2f | *GRANDE* - R$ %.2f\n\n", second.content, price.smallSize, price.bigSize)
+        })
+        
+        + menuBaseBoard
     }
+    
+    
     
     
 }
