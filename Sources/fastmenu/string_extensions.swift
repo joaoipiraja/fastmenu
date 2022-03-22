@@ -6,9 +6,19 @@
 //
 
 import Foundation
+import AppKit
+
 
 extension String
 {
+    
+    func copyToPasteboard(){
+        let pasteboard = NSPasteboard.general
+        pasteboard.clearContents()
+        pasteboard.setString(self.description, forType: .string)
+        pasteboard.string(forType: .string)
+    }
+    
     func removeSpaces() -> String
    {
     return self.trimmingCharacters(in: NSCharacterSet.whitespaces)
