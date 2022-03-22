@@ -23,3 +23,6 @@ OPTIONS:
  swift run fastmenu --copy-to-paste-board
  
 ```
+###
+
+[<img src="/Screenshots/1.png" width="75%"/>](1.png)
