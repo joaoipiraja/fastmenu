@@ -43,8 +43,7 @@ class Price{
             self.smallSize = 16.0
             self.bigSize = 25.0
         case .none:
-            self.smallSize = Float.nan
-            self.bigSize = Float.nan
+            break
         }
         
         
@@ -95,58 +94,53 @@ class MenuItem: food_classifier {
 
 
 
-
-
-
 class Menu: CustomStringConvertible{
     
-    private let menuHeader =
-    "\n🌸 Bom dia, nosso cardápio de hoje é:\n\n"
-    
-    private let menuBaseBoard = """
-    
-    Aos interessados, favor confirmar seu pedido!
-    -----
-    Aceitamos pagamento por PIX
-    🔑  (85)998159740
-    🔑  najlaipiraja@hotmail.com
-    -----
-    Disponíveis de 11:30 ~ 12:30 no APT 1004 T1.
-    """
-    
+    var serviceTime:String
     private var items: Array<MenuItem>
-    var menuInput:String
+    private var menuHeader:String
+    private var menuBaseBoard:String
     
 
-    init(menuInput: String){
+    init(serviceTime: String){
         self.items = Array()
-        self.menuInput = menuInput
-        self.split_menu()
+        self.serviceTime = serviceTime
+        menuHeader = "\n🌸 Bom dia, nosso cardápio de hoje é:\n\n"
+        menuBaseBoard = """
+        
+        Aos interessados, favor confirmar seu pedido!
+        -----
+        Aceitamos pagamento por PIX
+        🔑  (85)998159740
+        🔑  najlaipiraja@hotmail.com
+        -----
+        Disponíveis de \(serviceTime) no APT 1004 T1.\n\n
+        """
     }
     
     
-    private func split_menu(){
-        
+    func split_menu(menuInput: String){
+       
         //Arroz branco;Feijão verde;Batata doce cozida;Sobrecoxa tradicional assada no forno ou omelete de queijo
         //Arroz branco;Feijão verde;Batata doce cozida;Sobrecoxa tradicional assada
         //Arroz branco;Feijão verde;Batata doce cozida;Omelete de queijo
         
-        var menu_aux = self.menuInput.components(separatedBy: [";", "\n"])
-        var main_dish = (menu_aux.last ?? "ou").components(separatedBy: "ou")
+        let menu_aux = menuInput.components(separatedBy: [";", "\n"])
+        let main_dish = (menu_aux.last ?? "ou").components(separatedBy: "ou")
         
         main_dish.forEach { md in
             var content = menu_aux.map{$0.removeSpaces().capitalizingFirstLetter()}
             content.removeLast()
             content.append(md.removeSpaces().capitalizingFirstLetter())
             let contentString = content.joined(separator: ";")
-            items.append(MenuItem(content: contentString ))
+            items.append(MenuItem(content: contentString))
+            
         }
         
     }
     
     
     var description: String {
-        return
         
         menuHeader +
         
@@ -156,6 +150,8 @@ class Menu: CustomStringConvertible{
         })
         
         + menuBaseBoard
+        
+      
     }
     
     
