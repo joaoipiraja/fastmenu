@@ -46,7 +46,7 @@ struct FastMenu: ParsableCommand{
     )
     
 
-    @Flag(help: "Execute menu script")
+    @Flag(help: "Copy output to pasteboard")
     var copyToPasteBoard = false
     
     @Option(help: "Time interval of service")
