@@ -29,13 +29,14 @@ class Price{
     func add(by label: String){
        let food_type = FoodTypes(rawValue: label) ?? FoodTypes.none
         
+        //Torta de atum - 18/ 27
         switch food_type{
         case .chicken:
             self.smallSize = 16.0
             self.bigSize = 25.0
         case .red_meat:
-            self.smallSize = 19.0
-            self.bigSize = 28.0
+            self.smallSize = 20.0
+            self.bigSize = 30.0
         case .fish:
             self.smallSize = 20.0
             self.bigSize = 30.0
@@ -107,7 +108,7 @@ class Menu: CustomStringConvertible{
         self.serviceTime = serviceTime
         menuHeader = "\n🌸 Bom dia, nosso cardápio de hoje é:\n"
         menuBaseBoard = """
-        
+
         Aos interessados, favor confirmar seu pedido!
         -----
         Aceitamos pagamento por PIX
