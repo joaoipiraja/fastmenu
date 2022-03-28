@@ -19,10 +19,9 @@ extension String
         pasteboard.string(forType: .string)
     }
     
-    func removeSpaces() -> String
-   {
-    return self.trimmingCharacters(in: NSCharacterSet.whitespaces)
-   }
+    func removeSpaces() -> String{
+        return self.trimmingCharacters(in: NSCharacterSet.whitespaces)
+    }
     
     func capitalizingFirstLetter() -> String {
           return prefix(1).uppercased() + self.lowercased().dropFirst()

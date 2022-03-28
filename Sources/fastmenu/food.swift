@@ -105,7 +105,7 @@ class Menu: CustomStringConvertible{
     init(serviceTime: String){
         self.items = Array()
         self.serviceTime = serviceTime
-        menuHeader = "\n🌸 Bom dia, nosso cardápio de hoje é:\n\n"
+        menuHeader = "\n🌸 Bom dia, nosso cardápio de hoje é:\n"
         menuBaseBoard = """
         
         Aos interessados, favor confirmar seu pedido!
@@ -146,7 +146,7 @@ class Menu: CustomStringConvertible{
         
         items.reduce("", { first, second in
             let price = second.generate()
-            return first + String(format:"\n%@ \n*PEQUENO* - R$ %.2f | *GRANDE* - R$ %.2f\n\n", second.content, price.smallSize, price.bigSize)
+            return first + String(format:"\n%@ \n*PEQUENO* - R$ %.2f | *GRANDE* - R$ %.2f\n", second.content, price.smallSize, price.bigSize)
         })
         
         + menuBaseBoard
