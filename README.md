@@ -1,6 +1,11 @@
-# Fast Menu
+# Fast Menu 🍛 🤖
  2nd Challenge - Mac CLI App
  
+ ### Motivation 💡
+ 
+ Help with my daily routine in my mother local business. That's why, i decided to create a SPM to generate menu by an input string using my skills in  machine learning (Core ML Framework). The results was pretty amazing: the NLP model had a great perfomance classifying 4 main dishes of the bento box
+ 
+ ### Run 💻
 ```bash
  
 OVERVIEW: Generate your menus easier than ever
