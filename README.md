@@ -9,7 +9,7 @@
  ```console
  
  cd /usr/local/bin
- sudo curl -OL https://github.com/joaoipiraja/fastmenu/releases/download/v1.0/fastmenu
+ sudo curl -OL https://github.com/joaoipiraja/fastmenu/releases/latest/download/fastmenu
  sudo chmod 755 fastmenu
  
   ```
