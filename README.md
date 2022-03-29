@@ -5,6 +5,14 @@
  
  Help with my daily routine in my mother local business. That's why, i decided to create a SPM to generate menu by an input string using my skills in  machine learning (Core ML Framework). The results was pretty amazing: the NLP model had a great perfomance classifying 4 main dishes of the bento box
  
+ ### Install 💻
+ ```console
+ 
+ sudo su
+ curl -OL https://github.com/joaoipiraja/fastmenu/releases/download/v1.0/fastmenu
+ chmod 755 fastmenu
+ 
+  ```
  ### Run 💻
 ```bash
  
