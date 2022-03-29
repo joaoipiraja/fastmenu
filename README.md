@@ -14,6 +14,13 @@
  
   ```
  ### Run 💻
+ 
+```bash
+
+fastmenu --help
+
+```
+
 ```bash
  
 OVERVIEW: Generate your menus easier than ever
@@ -30,10 +37,8 @@ OPTIONS:
 ```
 
 ```bash
-
- swift run fastmenu
- swift run fastmenu --service-time '12:30 ~ 13:00' --copy-to-paste-board
- swift run fastmenu --copy-to-paste-board
+ fastmenu --service-time '12:30 ~ 13:00' --copy-to-paste-board
+ fastmenu --copy-to-paste-board
  
 ```
 ###
